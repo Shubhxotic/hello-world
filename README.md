@@ -349,7 +349,7 @@ This is accomplished through the session middleware that Hasura provides. This s
 }
 ```
 
-  This query will set select permissions on the article table for the user role so that users will be able only insert entries into the article table with author_ids matching their user ids. This means that the database will not permit a user to write an article in another user's name.
+  This query will set select permissions on the article table for the user role so that users will only be able to insert entries into the article table with author_ids matching their user ids. This means that the database will not permit a user to write an article in another user's name.
   This sort of a constraint is a property of the data, and therefore should be accomplished in the database, and the permission layer provides the perfect tools for the job.
   Apart from create_insert_permissions, the Data API also provides other types of queries to create select/update and delete permissions. This way, permissions can be set on all CRUD operations.
 
