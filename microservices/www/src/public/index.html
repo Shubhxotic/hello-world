@@ -276,7 +276,7 @@
         }
       }
       </code></pre>
-      <p>This query will set select permissions on the article table for the user role so that users will be able only insert entries into the article table with author_ids matching their user ids. This means that the database will not permit a user to write an article in another user&#39;s name.<br>This sort of a constraint is a property of the data, and therefore should be accomplished in the database, and the permission layer provides the perfect tools for the job.<br>Apart from create_insert_permissions, the Data API also provides other types of queries to create select/update and delete permissions. This way, permissions can be set on all CRUD operations.</p>
+      <p>This query will set select permissions on the article table for the user role so that users will only be able to insert entries into the article table with author_ids matching their user ids. This means that the database will not permit a user to write an article in another user&#39;s name.<br>This sort of a constraint is a property of the data, and therefore should be accomplished in the database, and the permission layer provides the perfect tools for the job.<br>Apart from create_insert_permissions, the Data API also provides other types of queries to create select/update and delete permissions. This way, permissions can be set on all CRUD operations.</p>
       </li>
       <li><p>The permission object in the json query uses syntax very similar to a where clause in the select query, making it extremely expressive,  as shown here:</p>
       <pre><code class="lang-json">
@@ -365,7 +365,7 @@
       $ git push hasura master
       </code></pre>
       <br>
-      <p>This quickstart project comes with one such microservice written using NodeJS-Express. It microservice demonstrates the use of the Data APIs at the /get_articles endpoint. Since this cluster comes with sample data in the form of articles and authors, we make use of the Hasura Data APIs to fetch all articles. Check <a href="/get_articles">here</a>.
+      <p>This quickstart project comes with one such microservice written using NodeJS-Express. This microservice demonstrates the use of the Data APIs at the /get_articles endpoint. Since this cluster comes with sample data in the form of articles and authors, we make use of the Hasura Data APIs to fetch all articles. Check <a href="/get_articles">here</a>.
       </p>
       <h2 id="files-and-directories">Files and Directories</h2>
       <p>The project (a.k.a. project directory) has a particular directory structure and it has to be maintained strictly, else <code>hasura</code> cli would not work as expected. A representative project is shown below:</p>
